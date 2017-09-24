@@ -41,7 +41,7 @@ public class Login {
 	}
 
 	public String loginValidate() {
-		if (this.username.equals("admin") && this.password.equals("admin")) 
+		if (this.username.equals("Admin") && this.password.equals("Admin")) 
 		{
 		
 		return "Login_response" ;
