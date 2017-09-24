@@ -84,7 +84,7 @@
 					<div class="form-group">
                         <h:outputLabel value="Password" styleClass="control-label col-sm-2" />
                         <div class="col-sm-10">
-                        <h:inputSecret a:placeholder="Password" value="#{register.password}"   label="password"   required="true" id="password" requiredMessage="Please enter password" validatorMessage="Please create a password with atleast one capital letter, one number and a pattern">
+                        <h:inputSecret a:placeholder="Password" value="#{register.password}"   label="password"   required="true" id="password" requiredMessage="Please enter password" validatorMessage="Please create a password with atleast one capital letter, one number and a pattern(@,#,$,%)">
                         <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"/></h:inputSecret>
                         <h:messages  for="password" styleClass="error"/>
                     </div>
