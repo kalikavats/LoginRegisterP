@@ -2,7 +2,8 @@
 <html lang="en"
     xmlns="http://www.w3.org/1999/xhtml"
     xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
     
   <h:head>
   <meta charset="utf-8"/>
@@ -24,20 +25,21 @@
         </div>
       </div>
   </div> 
-  <div class="row">
-			<div class="col-xs-12">
+  <div class="cols">
+			<div class="row-xs-12">
   <h:form styleClass="form-horizontal">
 					<div class="form-group">
 						<h:outputLabel value="Username " styleClass="control-label col-sm-1"/>
 						<div class="col-sm-10">
-							<h:inputText value="#{login.username}" label="username" required="true" id="username" requiredMessage="Username Required" styleClass="form-control"/>
+							<h:inputText value="#{login.username}" label="username" required="true" id="username" a:placeholder="Username" requiredMessage="Username Required"  styleClass="form-control"/>
+							
 							<h:messages  for="username" styleClass="error"/>
 						</div>
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Password" styleClass="control-label col-sm-1"/>
 						<div class="col-sm-10">
-							<h:inputSecret value="#{login.password}" label="password" required="true" id="password" styleClass="form-control" requiredMessage="Password Required" />
+							<h:inputSecret value="#{login.password}" label="password" required="true" id="password" a:placeholder="Password" styleClass="form-control" requiredMessage="Password Required" />
 							<h:messages  for="password" styleClass="error"/>
 						</div>
 					</div>
@@ -50,7 +52,8 @@
 				<h:form>
 				<div class="form-group">
 						<div class="col-sm-offset-1 col-sm-9">
-							<h:commandButton value="New User? Register" action="Register" styleClass="bta btnlg btn-primary"  />
+						<a href="http://localhost:8080/LoginRegisterP/faces/Register.xhtml">New User ? Register Here</a>
+							<!--<h:commandButton value="New User? Register" action="Register" styleClass="bta btnlg btn-primary"  /> -->
 						</div>
 					</div>
 					</h:form>

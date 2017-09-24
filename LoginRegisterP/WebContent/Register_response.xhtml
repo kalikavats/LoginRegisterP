@@ -5,10 +5,32 @@
 
 <h:head>
 <title>The person has been registered into the database</title>
+<meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Conpatible" content="IE=edge"/>
+  <h:outputStylesheet library="css" name="bootstrap.min1.css"> </h:outputStylesheet>
+  <style>
+   .error{color:red}
+  </style>
 </h:head>
 <h:body>
-Congratulations #{register.firstName} #{register.lastName}, you have been successfully registered.
+
 <br></br>
-Please use the username #{register.username} for login.Thank you!!        
+<br></br>
+<br></br>
+  
+<div class="container container-table">
+    <div class="row vertical-center-row">
+        <div class="text-center col-md-4 col-md-offset-4">Congratulations #{register.firstName} #{register.lastName}, you have been successfully registered.</div>
+    </div>
+</div>  
+<br></br>
+<div class="container container-table">
+    <div class="row vertical-center-row">
+        <div class="text-center col-md-4 col-md-offset-4">Please use the username "#{register.username}" for login.Thank you!! </div>
+    </div>
+</div>  
+
+     
 </h:body>
 </html>
